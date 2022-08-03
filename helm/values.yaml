@@ -68,3 +68,8 @@ rbac:
   apiVersion: v1
   ## Cluster role reference
   roleRef: cluster-admin
+
+## Resource Quotas
+quotas:
+  cpu:                                                                                                                          
+  memory:  

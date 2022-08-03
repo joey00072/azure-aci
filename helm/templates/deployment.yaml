@@ -39,6 +39,10 @@ spec:
           value: {{ tpl .Values.taint.value $ }}
         - name: VKUBELET_TAINT_EFFECT
           value: {{ .Values.taint.effect }}
+        - name: ACI_QUOTA_CPU
+          value: {{ .Values.quotas.cpu }}
+        - name: ACI_QUOTA_MEMORY
+          value: {{ .Values.quotas.memory }}
 {{- if eq (required "You must specify a Virtual Kubelet provider" .Values.provider) "azure" }}
 {{- with .Values.providers.azure }}
 {{- if .loganalytics.enabled }}
